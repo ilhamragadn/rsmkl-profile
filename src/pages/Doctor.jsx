@@ -20,27 +20,19 @@ const Doctor = () => {
         <p>Dokter RS Muhammadiyah Kalikapas</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="relative">
-            <img
-              className="h-auto max-w-full rounded-lg bg-slate-100"
-              src={drRomy}
-              alt="dr romy"
-            />
-            <div className="absolute bottom-8 h-1/4 w-full bg-slate-50 opacity-90 p-8 text-center">
-              <p className="text-2xl font-bold">
+          <div className="relative rounded-lg bg-slate-100">
+            <img className="h-auto max-w-full" src={drRomy} alt="dr romy" />
+            <div className="absolute bottom-2 left-0 w-full bg-slate-50 opacity-90 p-1 md:p-2 lg:p-4 text-center">
+              <p className="text-sm md:text-xl lg:text-2xl font-bold">
                 dr. Romy Hari Pujianto, Sp. B
               </p>
-              <p className="text-xl font-semibold mt-2">
+              <p className="text-xs md:text-lg lg:text-xl font-semibold mt-1 md:mt-2 lg:mt-2">
                 Dokter Spesialis Bedah
               </p>
             </div>
           </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-slate-100"
-              src={drDewi}
-              alt="dr dewi"
-            />
+          <div className="relative rounded-lg bg-slate-100">
+            <img className="h-auto max-w-full" src={drDewi} alt="dr dewi" />
           </div>
           <div>
             <img
