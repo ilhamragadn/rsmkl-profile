@@ -1,3 +1,4 @@
+import { useState } from "react";
 import drYusuf from "../assets/img/doctors/dr.Abd._Yusuf_Habibie_Sp.OT.png";
 import drBayu from "../assets/img/doctors/dr.Bayu_Kurniawan_Sp.A.png";
 import drDewi from "../assets/img/doctors/dr.Dewi_Masitha_Sp.G.K.png";
@@ -9,97 +10,323 @@ import drLakhsmi from "../assets/img/doctors/dr.Lakhsmi_Pramushinta_Sp.JP.png";
 import drRazzaqy from "../assets/img/doctors/dr.Razzaqy_Sp.M.png";
 import drRomy from "../assets/img/doctors/dr.Romy_Hari_Pujianto_Sp.B.png";
 import drgAgus from "../assets/img/doctors/drg.Agus_Syaifuddin_Setiawan.png";
+import drgLina from "../assets/img/doctors/drg.Lina_Rohmawati_Sp.Perio.png";
+import DoctorCard from "../components/DoctorCard";
 import Navbar from "../components/Navbar";
+import ScheduleCard from "../components/ScheduleCard";
+import ScheduleList from "../utils/ScheduleList";
 
 const Doctor = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = ["Dokter", "Jadwal"];
   return (
     <div>
       <Navbar />
 
-      <div className="max-w-screen-xl shadow rounded-md mt-24 mx-auto p-4">
-        <p>Dokter RS Muhammadiyah Kalikapas</p>
+      <div className="max-w-screen-xl shadow-xl rounded-md mt-28 mb-12 mx-auto p-4">
+        <div className="flex justify-center space-x-4 mb-4">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={`py-2 px-4 ${
+                activeTab === index
+                  ? "bg-sky-100/40 border-b-sky-500 border-b-4 rounded"
+                  : "hover:bg-sky-100/30 hover:rounded"
+              }`}
+              onClick={() => setActiveTab(index)}
+            >
+              <p
+                className={`font-semibold text-lg tracking-wide ${
+                  activeTab === index ? "text-sky-500" : "text-gray-400"
+                }`}
+              >
+                {tab}
+              </p>
+            </button>
+          ))}
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="relative rounded-lg bg-slate-100">
-            <img className="h-auto max-w-full" src={drRomy} alt="dr romy" />
-            <div className="absolute bottom-2 left-0 w-full bg-slate-50 opacity-90 p-1 md:p-2 lg:p-4 text-center">
-              <p className="text-sm md:text-xl lg:text-2xl font-bold">
-                dr. Romy Hari Pujianto, Sp. B
-              </p>
-              <p className="text-xs md:text-lg lg:text-xl font-semibold mt-1 md:mt-2 lg:mt-2">
-                Dokter Spesialis Bedah
-              </p>
+        <div>
+          {tabs.map((_tab, index) => (
+            <div key={index}>
+              {activeTab === index ? (
+                <div className={`${index === 0 ? "" : "hidden"}`}>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-4">
+                    <DoctorCard
+                      className="bg-gray-100"
+                      doctorImg={drRomy}
+                      doctorName="dr. Romy Hari Pujianto, Sp.B."
+                      doctorSpecialist="Dokter Spesialis Bedah"
+                    />
+                    <DoctorCard
+                      className="bg-gray-100"
+                      doctorImg={drDewi}
+                      doctorName="dr. Dewi Masitha, Sp.GK."
+                      doctorSpecialist="Dokter Spesialis Gizi"
+                    />
+                    <DoctorCard
+                      className="bg-gray-100"
+                      doctorImg={drFajar}
+                      doctorName="dr. Fajar Admayana, Sp.PD."
+                      doctorSpecialist="Dokter Spesialis Penyakit Dalam"
+                    />
+                    <DoctorCard
+                      className="bg-stone-100"
+                      doctorImg={drBayu}
+                      doctorName="dr. Bayu Kurniawan, Sp.A."
+                      doctorSpecialist="Dokter Spesialis Anak"
+                    />
+                    <DoctorCard
+                      className="bg-stone-100"
+                      doctorImg={drLakhsmi}
+                      doctorName="dr. Lakhsmi Pramushinta, Sp.JP."
+                      doctorSpecialist="Dokter Spesialis Jantung dan Pembuluh Darah"
+                    />
+                    <DoctorCard
+                      className="bg-stone-100"
+                      doctorImg={drDhimas}
+                      doctorName="dr. Dhimas Hantoko, Sp.S."
+                      doctorSpecialist="Dokter Spesialis Saraf"
+                    />
+                    <DoctorCard
+                      className="bg-gray-100"
+                      doctorImg={drRazzaqy}
+                      doctorName="dr. Razzaqy, Sp.M."
+                      doctorSpecialist="Dokter Spesialis Mata"
+                    />
+                    <DoctorCard
+                      className="bg-gray-100"
+                      doctorImg={drgLina}
+                      doctorName="drg. Lina Rohmawati, Sp.Perio."
+                      doctorSpecialist="Dokter Spesialis Periodonsia"
+                    />
+                    <DoctorCard
+                      className="bg-gray-100"
+                      doctorImg={drgAgus}
+                      doctorName="drg. Agus Syaifuddin Setiawan."
+                      doctorSpecialist="Dokter Gigi"
+                    />
+                    <DoctorCard
+                      className="bg-stone-100"
+                      doctorImg={drEni}
+                      doctorName="dr. Eni Fatmawati, Sp.OG."
+                      doctorSpecialist="Dokter Spesialis Obstetri dan Ginekologi (Obgyn)"
+                    />
+                    <DoctorCard
+                      className="bg-stone-100"
+                      doctorImg={drYusuf}
+                      doctorName="dr. Abdurrahman Yusuf Habibie, Sp.OT."
+                      doctorSpecialist="Dokter Spesialis Ortopedi dan Traumatologi"
+                    />
+                    <DoctorCard
+                      className="bg-stone-100"
+                      doctorImg={drDiyah}
+                      doctorName="dr. Diyah Novita Ofa N, Sp.OG."
+                      doctorSpecialist="Dokter Spesialis Obstetri dan Ginekologi (Obgyn)"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className={`${index === 1 ? "hidden" : ""}`}>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                    <ScheduleCard day="Senin">
+                      <ScheduleList
+                        speciality="Mata"
+                        startHour="09.00"
+                        endHour="12.00"
+                        doctorInCharge="dr. Razzaqy, Sp.M."
+                      />
+                      <ScheduleList
+                        speciality="Gigi"
+                        startHour="13.00"
+                        endHour="15.00"
+                        doctorInCharge="drg. Agus Syaifuddin Setiawan."
+                      />
+                      <ScheduleList
+                        speciality="Bedah"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Romy Hari Pujianto, Sp.B."
+                      />
+                      <ScheduleList
+                        speciality="Obgyn"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Diyah Novita Ofa N, Sp.OG."
+                      />
+                      <ScheduleList
+                        speciality="Ortopedi"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Abdurrahman Yusuf Habibie, Sp.OT."
+                      />
+                    </ScheduleCard>
+                    <ScheduleCard day="Selasa">
+                      <ScheduleList
+                        speciality="Gigi Periodonsia"
+                        startHour="09.00"
+                        endHour="11.00"
+                        doctorInCharge="drg. Lina Rohmawati, Sp.Perio."
+                      />
+                      <ScheduleList
+                        speciality="Mata"
+                        startHour="09.00"
+                        endHour="12.00"
+                        doctorInCharge="dr. Razzaqy, Sp.M."
+                      />
+                      <ScheduleList
+                        speciality="Penyakit Dalam"
+                        startHour="12.05"
+                        endHour="14.05"
+                        doctorInCharge="dr. Fajar Admayana, Sp.PD."
+                      />
+                      <ScheduleList
+                        speciality="Gigi"
+                        startHour="13.00"
+                        endHour="15.00"
+                        doctorInCharge="drg. Agus Syaifuddin Setiawan."
+                      />
+                      <ScheduleList
+                        speciality="Bedah"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Romy Hari Pujianto, Sp.B."
+                      />
+                      <ScheduleList
+                        speciality="Gizi"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Dewi Masitha, Sp.GK."
+                      />
+                      <ScheduleList
+                        speciality="Obgyn"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Eni Fatmawati, Sp.OG."
+                      />
+                    </ScheduleCard>
+                    <ScheduleCard day="Rabu">
+                      <ScheduleList
+                        speciality="Gigi Periodonsia"
+                        startHour="09.00"
+                        endHour="11.00"
+                        doctorInCharge="drg. Lina Rohmawati, Sp.Perio."
+                      />
+                      <ScheduleList
+                        speciality="Penyakit Dalam"
+                        startHour="12.05"
+                        endHour="14.05"
+                        doctorInCharge="dr. Fajar Admayana, Sp.PD."
+                      />
+                      <ScheduleList
+                        speciality="Gigi"
+                        startHour="13.00"
+                        endHour="15.00"
+                        doctorInCharge="drg. Agus Syaifuddin Setiawan."
+                      />
+                      <ScheduleList
+                        speciality="Bedah"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Romy Hari Pujianto, Sp.B."
+                      />
+                      <ScheduleList
+                        speciality="Gizi"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Dewi Masitha, Sp.GK."
+                      />
+                      <ScheduleList
+                        speciality="Obgyn"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Eni Fatmawati, Sp.OG."
+                      />
+                      <ScheduleList
+                        speciality="Jantung"
+                        startHour="16.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Lakhsmi Pramushinta, Sp.JP."
+                      />
+                    </ScheduleCard>
+                    <ScheduleCard day="Rabu">
+                      <ScheduleList
+                        speciality="Gigi Periodonsia"
+                        startHour="09.00"
+                        endHour="11.00"
+                        doctorInCharge="drg. Lina Rohmawati, Sp.Perio."
+                      />
+                      <ScheduleList
+                        speciality="Gigi"
+                        startHour="13.00"
+                        endHour="15.00"
+                        doctorInCharge="drg. Agus Syaifuddin Setiawan."
+                      />
+                      <ScheduleList
+                        speciality="Anak"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Bayu Kurniawan, Sp.A."
+                      />
+                      <ScheduleList
+                        speciality="Bedah"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Romy Hari Pujianto, Sp.B."
+                      />
+                      <ScheduleList
+                        speciality="Gizi"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Dewi Masitha, Sp.GK."
+                      />
+                      <ScheduleList
+                        speciality="Obgyn"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Eni Fatmawati, Sp.OG."
+                      />
+                    </ScheduleCard>
+                    <ScheduleCard day="Jum'at">
+                      <ScheduleList
+                        speciality="Mata"
+                        startHour="09.00"
+                        endHour="12.00"
+                        doctorInCharge="dr. Razzaqy, Sp.M."
+                      />
+                      <ScheduleList
+                        speciality="Penyakit Dalam"
+                        startHour="12.05"
+                        endHour="14.05"
+                        doctorInCharge="dr. Fajar Admayana, Sp.PD."
+                      />
+                      <ScheduleList
+                        speciality="Obgyn"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Eni Fatmawati, Sp.OG."
+                      />
+                      <ScheduleList
+                        speciality="Gizi"
+                        startHour="15.00"
+                        endHour="17.00"
+                        doctorInCharge="dr. Dewi Masitha, Sp.GK."
+                      />
+                    </ScheduleCard>
+                    <ScheduleCard day="Sabtu">
+                      <ScheduleList
+                        speciality="Syaraf"
+                        startHour="12.05"
+                        endHour="14.05"
+                        doctorInCharge="dr. Dhimas Hantoko, Sp.S."
+                      />
+                    </ScheduleCard>
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-          <div className="relative rounded-lg bg-slate-100">
-            <img className="h-auto max-w-full" src={drDewi} alt="dr dewi" />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-slate-100"
-              src={drFajar}
-              alt="dr fajar"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-stone-100"
-              src={drBayu}
-              alt="dr bayu"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-stone-100"
-              src={drLakhsmi}
-              alt="dr lakhsmi"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-stone-100"
-              src={drDhimas}
-              alt="dr dhimas"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-slate-100"
-              src={drRazzaqy}
-              alt="dr razzaqy"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-slate-100"
-              src=""
-              alt="dr lina"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-slate-100"
-              src={drgAgus}
-              alt="dr agus"
-            />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-stone-100"
-              src={drEni}
-              alt="dr eni"
-            />
-          </div>
-          <div className="flex items-end rounded-lg bg-stone-100">
-            <img className="h-auto max-w-full" src={drYusuf} alt="dr yusuf" />
-          </div>
-          <div>
-            <img
-              className="h-auto max-w-full rounded-lg bg-stone-100"
-              src={drDiyah}
-              alt="dr diyah"
-            />
-          </div>
+          ))}
         </div>
       </div>
     </div>
