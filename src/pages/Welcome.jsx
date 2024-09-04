@@ -19,7 +19,6 @@ import waIcon from "../assets/icons/whatsapp.png";
 import ytIcon from "../assets/icons/youtube.png";
 import RSMKLFull from "../assets/logo-rsmkl-full.png";
 import Carousel from "../components/Carousel";
-import Navbar from "../components/Navbar";
 import NewsCard from "../components/NewsCard";
 import ServiceCard from "../components/ServiceCard";
 import ReadMoreBtn from "../utils/ReadMoreBtn";
@@ -27,18 +26,15 @@ import ReadMoreBtn from "../utils/ReadMoreBtn";
 const Welcome = () => {
   return (
     <div>
-      <Navbar />
       {/* decoration */}
-      <div className="max-w-7xl bg-sky-500 mt-20 px-4 py-2 shadow-lg rounded-b-xl mx-auto">
-        <div className="flex flex-col justify-center md:flex-row md:space-x-8">
+      <div className="max-w-7xl bg-sky-500 mt-12 md:mt-20 px-4 py-2 shadow-lg rounded-b-xl mx-auto">
+        <div className="flex flex-col justify-center md:flex-row space-y-1 md:space-x-8">
           <a href="https://g.co/kgs/7MqvHNj" target="_blank">
             <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faMapLocationDot}
-                size="lg"
-                className="text-white"
-              />
-              <p className="text-xl font-bold text-white ms-2">
+              <div className="text-xs md:text-base text-white">
+                <FontAwesomeIcon icon={faMapLocationDot} size="lg" />
+              </div>
+              <p className="text-xs md:text-xl font-bold text-white ms-2">
                 Jl. Raya Mantup, Kalikapas, Kab. Lamongan, Jawa Timur
               </p>
             </div>
@@ -46,12 +42,10 @@ const Welcome = () => {
 
           <a href="mailto:rsmkalikapas@gmail.com">
             <div className="flex items-center">
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                size="lg"
-                className="text-white mt-1"
-              />
-              <p className="text-xl font-bold text-white ms-2">
+              <div className="text-xs md:text-base text-white mt-0 md:mt-1">
+                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+              </div>
+              <p className="text-sm md:text-xl font-bold text-white ms-2">
                 rsmkalikapas@gmail.com
               </p>
             </div>
@@ -60,7 +54,10 @@ const Welcome = () => {
       </div>
 
       {/* about */}
-      <div id="about" className="grid grid-cols-2 gap-4 m-8 py-12">
+      <div
+        id="about"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 py-0 md:py-12"
+      >
         <div className="flex justify-center items-center">
           <Carousel />
         </div>
@@ -84,7 +81,7 @@ const Welcome = () => {
       </div>
 
       {/* services */}
-      <div id="services" className="m-8 pt-24">
+      <div id="services" className="m-8 pt-0 md:pt-24">
         <div>
           <p className="font-bold text-3xl ms-4">Layanan</p>
           <p className="mt-4 ms-4 indent-8">
@@ -97,7 +94,7 @@ const Welcome = () => {
             dolor quis iusto!
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           <ServiceCard
             icon={<FontAwesomeIcon icon={faClockRotateLeft} size="4x" />}
             title="IGD 24 Jam"
@@ -134,11 +131,14 @@ const Welcome = () => {
             icon={<FontAwesomeIcon icon={faUserDoctor} size="4x" />}
             title="Instalasi Bedah Sentral"
           />
-          <div className="col-span-3 flex space-x-4">
-            <div className="w-1/2 bg-neutral-200 rounded-full shadow-lg p-4 text-sky-950 flex flex-col justify-center items-center">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a
+              href="/polyclinic"
+              className="w-full sm:w-1/2 bg-neutral-200 rounded-full shadow-lg p-4 text-sky-950 flex flex-col justify-center items-center"
+            >
               <div className="flex flex-row items-center">
                 <span className="font-bold text-xl tracking-wide">
-                  Layanan Poliklinik
+                  Poliklinik
                 </span>
                 <svg
                   className="w-6 h-6 ml-2 mt-1"
@@ -156,11 +156,14 @@ const Welcome = () => {
                   ></path>
                 </svg>
               </div>
-            </div>
-            <div className="w-1/2 bg-neutral-200 rounded-full shadow-lg p-4 text-sky-950 flex flex-col justify-center items-center">
+            </a>
+            <a
+              href="/inpatient-room"
+              className="w-full sm:w-1/2 bg-neutral-200 rounded-full shadow-lg p-4 text-sky-950 flex flex-col justify-center items-center"
+            >
               <div className="flex flex-row items-center">
                 <span className="font-bold text-xl tracking-wide">
-                  Fasilitas Kamar
+                  Kamar Inap
                 </span>
                 <svg
                   className="w-6 h-6 ml-2 mt-1"
@@ -178,18 +181,18 @@ const Welcome = () => {
                   ></path>
                 </svg>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
 
       {/* informasi */}
-      <div id="informations" className="m-8 pt-24">
+      <div id="information" className="m-8 pt-24">
         <div>
           <p className="font-bold text-3xl text-center">Informasi</p>
         </div>
 
-        <div className="max-w-screen-2xl mx-auto mt-4">
+        <div className="max-w-screen-2xl mx-auto my-4">
           <div
             className="flex overflow-x-scroll"
             style={{
@@ -210,7 +213,7 @@ const Welcome = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center flex-wrap space-x-4 space-y-2">
           <a
             href="https://www.instagram.com/rsmkalikapas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
@@ -235,14 +238,14 @@ const Welcome = () => {
         <div>
           <p className="font-bold text-3xl text-center">Hubungi Kami</p>
         </div>
-        <div className="grid grid-cols-2 gap-4 mt-6 rounded-lg shadow bg-gradient-to-b from-white via-sky-50 to-sky-200 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 rounded-lg shadow bg-gradient-to-b from-white via-sky-50 to-sky-200 ">
           <div className="flex justify-center items-center">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15835.516492557126!2d112.4125432!3d-7.1399741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77f7095cdf373b%3A0x8af377ce882071a!2sRumah%20Sakit%20Muhammadiyah%20Kalikapas%20Lamongan!5e0!3m2!1sid!2sid!4v1724032466404!5m2!1sid!2sid"
               width="713"
               height="401"
               className=""
-              allowfullscreen
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -254,14 +257,14 @@ const Welcome = () => {
                   <div>
                     <input
                       type="text"
-                      className="w-full block bg-gray-100 p-2 my-1 rounded shadow-sm"
+                      className="w-full block bg-gray-50 p-2 my-1 rounded shadow-sm"
                       placeholder="Nama Lengkap"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
-                      className="w-full block bg-gray-100 p-2 my-1 rounded shadow-sm"
+                      className="w-full block bg-gray-50 p-2 my-1 rounded shadow-sm"
                       placeholder="Email"
                     />
                   </div>
@@ -271,7 +274,7 @@ const Welcome = () => {
                     name=""
                     id=""
                     placeholder="Ulasan, kritik, saran."
-                    className="w-full block bg-gray-100 p-2 my-1 rounded shadow-sm"
+                    className="w-full block bg-gray-50 p-2 my-1 rounded shadow-sm"
                     rows={6}
                   ></textarea>
                 </div>

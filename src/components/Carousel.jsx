@@ -37,8 +37,8 @@ const Carousel = () => {
 
   return (
     <div className="relative w-full">
-      <div className="relative h-56 overflow-hidden md:h-96 rounded-lg shadow-lg">
-        <div className="">
+      <div className="relative h-48 overflow-hidden md:h-96 rounded-lg shadow-lg">
+        <div>
           <img
             src={images[currentIndex]}
             className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"

@@ -12,7 +12,6 @@ import drRomy from "../assets/img/doctors/dr.Romy_Hari_Pujianto_Sp.B.png";
 import drgAgus from "../assets/img/doctors/drg.Agus_Syaifuddin_Setiawan.png";
 import drgLina from "../assets/img/doctors/drg.Lina_Rohmawati_Sp.Perio.png";
 import DoctorCard from "../components/DoctorCard";
-import Navbar from "../components/Navbar";
 import ScheduleCard from "../components/ScheduleCard";
 import ScheduleList from "../utils/ScheduleList";
 
@@ -22,9 +21,7 @@ const Doctor = () => {
   const tabs = ["Dokter", "Jadwal"];
   return (
     <div>
-      <Navbar />
-
-      <div className="max-w-screen-xl shadow-xl rounded-md mt-28 mb-12 mx-auto p-4">
+      <div className="max-w-screen-xl shadow-xl rounded-md mt-12 md:mt-28 mb-12 mx-auto p-4">
         <div className="flex justify-center space-x-4 mb-4">
           {tabs.map((tab, index) => (
             <button
@@ -52,7 +49,7 @@ const Doctor = () => {
             <div key={index}>
               {activeTab === index ? (
                 <div className={`${index === 0 ? "" : "hidden"}`}>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
                     <DoctorCard
                       className="bg-gray-100"
                       doctorImg={drRomy}
@@ -129,7 +126,7 @@ const Doctor = () => {
                 </div>
               ) : (
                 <div className={`${index === 1 ? "hidden" : ""}`}>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                     <ScheduleCard day="Senin">
                       <ScheduleList
                         speciality="Mata"
@@ -250,7 +247,7 @@ const Doctor = () => {
                         doctorInCharge="dr. Lakhsmi Pramushinta, Sp.JP."
                       />
                     </ScheduleCard>
-                    <ScheduleCard day="Rabu">
+                    <ScheduleCard day="Kamis">
                       <ScheduleList
                         speciality="Gigi Periodonsia"
                         startHour="09.00"
