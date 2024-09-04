@@ -56,7 +56,7 @@ const Welcome = () => {
       {/* about */}
       <div
         id="about"
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 py-0 md:py-12"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 pt-4 md:pt-24"
       >
         <div className="flex justify-center items-center">
           <Carousel />
@@ -81,7 +81,7 @@ const Welcome = () => {
       </div>
 
       {/* services */}
-      <div id="services" className="m-8 pt-0 md:pt-24">
+      <div id="services" className="m-8 pt-4 md:pt-24">
         <div>
           <p className="font-bold text-3xl ms-4">Layanan</p>
           <p className="mt-4 ms-4 indent-8">
@@ -187,7 +187,7 @@ const Welcome = () => {
       </div>
 
       {/* informasi */}
-      <div id="information" className="m-8 pt-24">
+      <div id="information" className="m-8 pt-4 md:pt-24">
         <div>
           <p className="font-bold text-3xl text-center">Informasi</p>
         </div>
@@ -234,7 +234,7 @@ const Welcome = () => {
       </div>
 
       {/*  Hubungi Kami */}
-      <div id="contactUs" className="m-8 py-24">
+      <div id="contactUs" className="m-8 py-4 md:py-24">
         <div>
           <p className="font-bold text-3xl text-center">Hubungi Kami</p>
         </div>
