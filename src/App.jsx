@@ -5,6 +5,7 @@ import InpatientRoom from "./pages/InpatientRoom";
 import Polyclinic from "./pages/Polyclinic";
 import Welcome from "./pages/Welcome";
 import Navbar from "./components/Navbar";
+import DetailInpatientRoom from "./pages/DetailInpatientRoom";
 
 const App = () => {
   return (
@@ -15,6 +16,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/inpatient-room" element={<InpatientRoom />} />
+        <Route
+          path="/detail-inpatient-room"
+          element={<DetailInpatientRoom />}
+        />
         <Route path="/polyclinic" element={<Polyclinic />} />
       </Routes>
     </Router>

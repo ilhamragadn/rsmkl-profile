@@ -71,6 +71,19 @@ const Navbar = () => {
           },
           { name: "Dokter", path: "/doctor" },
         ];
+      case "/detail-inpatient-room":
+        return [
+          { name: "Beranda", path: "/" },
+          { name: "Tentang", path: "/about" },
+          {
+            name: "Layanan",
+            submenu: [
+              { name: "Poliklinik", path: "/polyclinic" },
+              { name: "Kamar Inap", path: "/inpatient-room" },
+            ],
+          },
+          { name: "Dokter", path: "/doctor" },
+        ];
       default:
         break;
     }
@@ -111,7 +124,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex justify-center text-white text-xs md:text-sm font-semibold">
-              <a href="tel:+6282232052900">
+              <a href="https://wa.link/e0794e">
                 <div className="text-center">
                   <p>IGD 24 Jam</p>
                   <p>0822-3205-2900</p>

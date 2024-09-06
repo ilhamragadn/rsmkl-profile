@@ -57,9 +57,12 @@ const InpatientRoom = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-sky-500 p-2 mt-4 rounded shadow-md text-center text-white font-medium">
+              <a
+                href="/detail-inpatient-room"
+                className="block bg-sky-500 p-2 mt-4 rounded shadow-md text-center text-white font-medium"
+              >
                 Detail
-              </div>
+              </a>
             </div>
           </div>
           <div className="p-4 rounded-md bg-white shadow-md h-min">
