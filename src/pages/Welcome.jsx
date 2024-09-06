@@ -17,6 +17,9 @@ import gmailIcon from "../assets/icons/gmail.png";
 import igIcon from "../assets/icons/instagram.png";
 import waIcon from "../assets/icons/whatsapp.png";
 import ytIcon from "../assets/icons/youtube.png";
+import accreditation from "../assets/img/akreditasi.png";
+import carouselImgWomans from "../assets/img/rsmkl-fotbar-cewe.png";
+import carouselImgHigherUps from "../assets/img/rsmkl-fotbar-petinggi.png";
 import RSMKLFull from "../assets/logo-rsmkl-full.png";
 import Carousel from "../components/Carousel";
 import NewsCard from "../components/NewsCard";
@@ -24,11 +27,12 @@ import ServiceCard from "../components/ServiceCard";
 import ReadMoreBtn from "../utils/ReadMoreBtn";
 
 const Welcome = () => {
+  const images = [carouselImgHigherUps, accreditation, carouselImgWomans];
   return (
     <div>
       {/* decoration */}
       <div className="max-w-7xl bg-sky-500 mt-12 md:mt-20 px-4 py-2 shadow-lg rounded-b-xl mx-auto">
-        <div className="flex flex-col justify-center md:flex-row space-y-1 md:space-x-8">
+        <div className="flex flex-col justify-center md:flex-row md:space-x-8">
           <a href="https://g.co/kgs/7MqvHNj" target="_blank">
             <div className="flex items-center">
               <div className="text-xs md:text-base text-white">
@@ -56,10 +60,10 @@ const Welcome = () => {
       {/* about */}
       <div
         id="about"
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 pt-4 md:pt-24"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 pt-0 md:pt-2"
       >
-        <div className="flex justify-center items-center">
-          <Carousel />
+        <div className="">
+          <Carousel srcImg={images} className="w-full" />
         </div>
         <div className="flex flex-col justify-center items-center px-8">
           <p className="text-4xl font-bold">
@@ -81,7 +85,7 @@ const Welcome = () => {
       </div>
 
       {/* services */}
-      <div id="services" className="m-8 pt-4 md:pt-24">
+      <div id="services" className="m-8 pt-4 md:pt-12">
         <div>
           <p className="font-bold text-3xl ms-4">Layanan</p>
           <p className="mt-4 ms-4 indent-8">
@@ -96,39 +100,39 @@ const Welcome = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faClockRotateLeft} size="4x" />}
+            icon={<FontAwesomeIcon icon={faClockRotateLeft} size="3x" />}
             title="IGD 24 Jam"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faTruckMedical} size="4x" />}
+            icon={<FontAwesomeIcon icon={faTruckMedical} size="3x" />}
             title="Ambulance"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faCapsules} size="4x" />}
+            icon={<FontAwesomeIcon icon={faCapsules} size="3x" />}
             title="Instalasi Farmasi"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faBookMedical} size="4x" />}
-            title="Layanan Rekam Medis"
+            icon={<FontAwesomeIcon icon={faBookMedical} size="3x" />}
+            title="Rekam Medis"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faBaby} size="4x" />}
+            icon={<FontAwesomeIcon icon={faBaby} size="3x" />}
             title="Persalinan"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faFlaskVial} size="4x" />}
+            icon={<FontAwesomeIcon icon={faFlaskVial} size="3x" />}
             title="Laboratorium"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faXRay} size="4x" />}
+            icon={<FontAwesomeIcon icon={faXRay} size="3x" />}
             title="Radiologi"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faHouseMedical} size="4x" />}
+            icon={<FontAwesomeIcon icon={faHouseMedical} size="3x" />}
             title="Rawat Inap"
           />
           <ServiceCard
-            icon={<FontAwesomeIcon icon={faUserDoctor} size="4x" />}
+            icon={<FontAwesomeIcon icon={faUserDoctor} size="3x" />}
             title="Instalasi Bedah Sentral"
           />
           <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -187,7 +191,7 @@ const Welcome = () => {
       </div>
 
       {/* informasi */}
-      <div id="information" className="m-8 pt-4 md:pt-24">
+      <div id="information" className="m-8 pt-4 md:pt-12">
         <div>
           <p className="font-bold text-3xl text-center">Informasi</p>
         </div>
@@ -204,16 +208,25 @@ const Welcome = () => {
               <div className="inline-block p-2">
                 <div className="flex space-x-4">
                   <NewsCard
+                    imgSrc="https://i0.wp.com/pwmu.co/wp-content/uploads/2021/04/IMG-20210410-WA0020.jpg?resize=1024%2C683&ssl=1"
+                    title="Hasil Akuisisi, RS Muhammadiyah Kalikapas Lamongan Diresmikan"
+                    body="Direktur RSM Kalikapas dr Romy Hari Purjianto SpB menyampaikan rasa syukur atas peresmian ini. “Pada tahun 2018 Pimpinan Daerah Muhammadiyah (PDM) Lamongan melakukan proses akuisisi rumah sakit swasta yang berhenti beroperasi untuk dijadikan amal usaha Muhammadiyah,” ujarnya dalam sambutan."
+                  >
+                    <ReadMoreBtn goTo="https://pwmu.co/186453/04/10/hasil-akuisisi-rs-muhammadiyah-kalikapas-lamongan-diresmikan1/" />
+                  </NewsCard>
+                  <NewsCard
                     imgSrc="https://www.muhammadiyahlamongan.com/wp-content/uploads/2024/08/IMG-20240819-WA0033-768x475.jpg"
                     title="RS Kalikapas Serahkan Hadiah Lomba Semarak HUT RI Ke 79"
                     body="Dalam rangka semarak merayakan Hari Kemerdekaan Republik Indonesia ke 79 Rumah Sakit Muhammadiyah Kalikapas Lamongan mengadakan sejumlah lomba."
-                  />
+                  >
+                    <ReadMoreBtn goTo="https://www.muhammadiyahlamongan.com/blog/rs-kalikapas-serahkan-hadiah-lomba-semarak-hut-ri-ke-79/" />
+                  </NewsCard>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center flex-wrap space-x-4 space-y-2">
+        <div className="flex justify-center flex-wrap space-x-4 space-y-2 md:space-y-0">
           <a
             href="https://www.instagram.com/rsmkalikapas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
@@ -234,12 +247,12 @@ const Welcome = () => {
       </div>
 
       {/*  Hubungi Kami */}
-      <div id="contactUs" className="m-8 py-4 md:py-24">
+      <div id="contactUs" className="m-8 py-4 md:py-12">
         <div>
           <p className="font-bold text-3xl text-center">Hubungi Kami</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 rounded-lg shadow bg-gradient-to-b from-white via-sky-50 to-sky-200 ">
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center p-4">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15835.516492557126!2d112.4125432!3d-7.1399741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77f7095cdf373b%3A0x8af377ce882071a!2sRumah%20Sakit%20Muhammadiyah%20Kalikapas%20Lamongan!5e0!3m2!1sid!2sid!4v1724032466404!5m2!1sid!2sid"
               width="713"
@@ -257,14 +270,14 @@ const Welcome = () => {
                   <div>
                     <input
                       type="text"
-                      className="w-full block bg-gray-50 p-2 my-1 rounded shadow-sm"
+                      className="w-full block bg-gray-100/80 p-2 my-1 rounded shadow-sm"
                       placeholder="Nama Lengkap"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
-                      className="w-full block bg-gray-50 p-2 my-1 rounded shadow-sm"
+                      className="w-full block bg-gray-100/80 p-2 my-1 rounded shadow-sm"
                       placeholder="Email"
                     />
                   </div>
@@ -274,7 +287,7 @@ const Welcome = () => {
                     name=""
                     id=""
                     placeholder="Ulasan, kritik, saran."
-                    className="w-full block bg-gray-50 p-2 my-1 rounded shadow-sm"
+                    className="w-full block bg-gray-100/80 p-2 my-1 rounded shadow-sm"
                     rows={6}
                   ></textarea>
                 </div>
@@ -290,14 +303,26 @@ const Welcome = () => {
                 Sakit Muhammadiyah Kalikapas.&quot;
               </p>
               <div className="flex flex-row items-center space-x-4 my-2">
-                <img src={waIcon} alt="rsmkl-wa-icon" className="w-6 h-6" />
+                <a href="https://wa.link/1io1z3" target="_blank">
+                  <img src={waIcon} alt="rsmkl-wa-icon" className="w-6 h-6" />
+                </a>
                 <img
                   src={gmailIcon}
                   alt="rsmkl-gmail-icon"
                   className="w-6 h-6"
                 />
-                <img src={igIcon} alt="rsmkl-ig-icon" className="w-5 h-5" />
-                <img src={ytIcon} alt="rsmkl-yt-icon" className="w-6 h-6" />
+                <a
+                  href="https://www.instagram.com/rsmkalikapas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                >
+                  <img src={igIcon} alt="rsmkl-ig-icon" className="w-5 h-5" />
+                </a>
+                <a
+                  href="http://www.youtube.com/@rsmkalikapaslamongan1157"
+                  target="_blank"
+                >
+                  <img src={ytIcon} alt="rsmkl-yt-icon" className="w-6 h-6" />
+                </a>
               </div>
               <div className="flex flex-row items-center">
                 <a href="https://linktr.ee/rsmkalikapas" target="blank">

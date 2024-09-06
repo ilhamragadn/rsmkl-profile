@@ -21,7 +21,7 @@ const Doctor = () => {
   const tabs = ["Dokter", "Jadwal"];
   return (
     <div>
-      <div className="max-w-screen-xl shadow-xl rounded-md mt-12 md:mt-28 mb-12 mx-auto p-4">
+      <div className="max-w-screen-xl shadow-xl rounded-md mt-12 md:mt-24 mb-12 mx-auto p-4">
         <div className="flex justify-center space-x-4 mb-4">
           {tabs.map((tab, index) => (
             <button

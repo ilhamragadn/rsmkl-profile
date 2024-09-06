@@ -2,11 +2,15 @@ import AdMedika from "../assets/img/partnerships/logo-admedika.png";
 import BPJSKesehatan from "../assets/img/partnerships/logo-bpjs-kesehatan.png";
 import BPJSKetenagakerjaan from "../assets/img/partnerships/logo-bpjs-ketenagakerjaan.png";
 import JasaRaharja from "../assets/img/partnerships/logo-jasa-raharja.png";
+import piagamMPKSDI from "../assets/img/sertif/penghargaan-mpksdi.png";
+import sertifikatLARSI from "../assets/img/sertif/sertifikat-akreditasi-LARSI.png";
+import Carousel from "../components/Carousel";
 
 const About = () => {
+  const images = [sertifikatLARSI, piagamMPKSDI];
   return (
     <div>
-      <div className="max-w-screen-xl mt-12 md:mt-24 p-4 mx-auto shadow-md rounded-md">
+      <div className="max-w-screen-xl mt-12 mb-8 md:mt-24 p-4 mx-auto shadow-md rounded-md">
         <p className="text-2xl text-center font-semibold">
           RS Muhammadiyah Kalikapas Lamongan
         </p>
@@ -49,17 +53,6 @@ const About = () => {
           </p>
         </div>
         <div className="mt-8 px-4">
-          <p className="text-xl font-bold text-center">Akreditasi</p>
-          <div className="flex flex-row justify-center items-center mt-4 space-x-4">
-            <div>
-              <p>
-                Telah terakreditasi oleh LARSI dengan predikat hasil penilaian
-                tertinggi (Akreditasi Paripurna)
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="mt-8 mb-2 px-4">
           <p className="text-xl font-bold text-center mb-4">Mitra</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
             <div className="rounded shadow">
@@ -94,6 +87,14 @@ const About = () => {
                 style={{ height: "150px" }}
               />
             </div>
+          </div>
+        </div>
+        <div className="mt-8 mb-2 px-4">
+          <p className="text-xl font-bold text-center">
+            Akreditasi & Penghargaan
+          </p>
+          <div className="max-w-4xl flex justify-center mt-4 mx-auto">
+            <Carousel srcImg={images} className="max-w-2xl mx-auto" />
           </div>
         </div>
       </div>

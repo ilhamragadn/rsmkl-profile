@@ -4,44 +4,40 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import accreditation from "../assets/img/akreditasi.png";
-import carouselImgWomans from "../assets/img/rsmkl-fotbar-cewe.png";
-import carouselImgHigherUps from "../assets/img/rsmkl-fotbar-petinggi.png";
 
-const Carousel = () => {
-  const images = [carouselImgHigherUps, accreditation, carouselImgWomans];
-
+const Carousel = ({ srcImg, ...props }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        prevIndex === srcImg.length - 1 ? 0 : prevIndex + 1
       );
     }, 7000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [srcImg.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? srcImg.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === srcImg.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   return (
     <div className="relative w-full">
-      <div className="relative h-48 overflow-hidden md:h-96 rounded-lg shadow-lg">
+      <div className="relative h-48 md:h-[26rem] lg:h-auto overflow-hidden  rounded-lg shadow-lg">
         <div>
           <img
-            src={images[currentIndex]}
-            className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            src={srcImg[currentIndex]}
+            className={`absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2`}
+            {...props}
             alt={`carousel-img-${currentIndex}`}
           />
         </div>
@@ -71,5 +67,7 @@ const Carousel = () => {
     </div>
   );
 };
+
+Carousel.propTypes;
 
 export default Carousel;
