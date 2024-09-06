@@ -1,6 +1,7 @@
 import AdMedika from "../assets/img/partnerships/logo-admedika.png";
 import BPJSKesehatan from "../assets/img/partnerships/logo-bpjs-kesehatan.png";
 import BPJSKetenagakerjaan from "../assets/img/partnerships/logo-bpjs-ketenagakerjaan.png";
+import JaringanRSMJatim from "../assets/img/partnerships/Logo-Jaringan-RSM-Jatim.png";
 import JasaRaharja from "../assets/img/partnerships/logo-jasa-raharja.png";
 import piagamMPKSDI from "../assets/img/sertif/penghargaan-mpksdi.png";
 import sertifikatLARSI from "../assets/img/sertif/sertifikat-akreditasi-LARSI.png";
@@ -55,6 +56,16 @@ const About = () => {
         <div className="mt-8 px-4">
           <p className="text-xl font-bold text-center mb-4">Mitra</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
+            <div></div>
+            <div className="col-span-2 rounded shadow">
+              <img
+                src={JaringanRSMJatim}
+                alt="logo-jejaring-rsm"
+                className="mx-auto"
+                style={{ height: "150px" }}
+              />
+            </div>
+            <div></div>
             <div className="rounded shadow">
               <img
                 src={AdMedika}
