@@ -56,8 +56,7 @@ const About = () => {
         <div className="mt-8 px-4">
           <p className="text-xl font-bold text-center mb-4">Mitra</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
-            <div></div>
-            <div className="col-span-2 rounded shadow">
+            <div className="col-span-4 rounded shadow">
               <img
                 src={JaringanRSMJatim}
                 alt="logo-jejaring-rsm"
@@ -65,7 +64,6 @@ const About = () => {
                 style={{ height: "150px" }}
               />
             </div>
-            <div></div>
             <div className="rounded shadow">
               <img
                 src={AdMedika}
