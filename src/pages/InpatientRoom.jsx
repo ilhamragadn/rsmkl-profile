@@ -4,8 +4,31 @@ import {
   faPeopleArrows,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { URL_API } from "../App";
 
 const InpatientRoom = () => {
+  const [dataKamarInap, setDataKamarInap] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${URL_API}inpatient-room`);
+        if (res.data.success) {
+          setDataKamarInap(res.data.data);
+        } else {
+          console.log("Failed fetching data: ", res.data.message);
+        }
+      } catch (error) {
+        console.log("Error fetching data: ", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  console.log(dataKamarInap);
+
   return (
     <div>
       <div className="mt-12 md:mt-20 h-auto md:h-screen bg-gray-50">
@@ -29,9 +52,25 @@ const InpatientRoom = () => {
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   Kelas VIP
                 </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Matahari A
-                </p>
+                <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-start md:gap-1">
+                  {Array.isArray(dataKamarInap) && dataKamarInap.length > 0 ? (
+                    dataKamarInap.map((item, index) =>
+                      item.class === "Kelas VIP" ? (
+                        <p
+                          key={index}
+                          className="text-lg md:text-base text-center md:text-start tracking-wide"
+                        >
+                          {item.name}
+                        </p>
+                      ) : null
+                    )
+                  ) : (
+                    <p>No data available</p>
+                  )}
+                  {/* <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Matahari A
+                  </p> */}
+                </div>
               </div>
             </div>
             <div className="mt-2">
@@ -81,9 +120,11 @@ const InpatientRoom = () => {
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   Kelas 1
                 </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Matahari A
-                </p>
+                <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-start md:gap-1">
+                  <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Matahari A
+                  </p>
+                </div>
               </div>
             </div>
             <div className="mt-2">
@@ -130,9 +171,11 @@ const InpatientRoom = () => {
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   Kelas 2
                 </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Matahari A
-                </p>
+                <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-start md:gap-1">
+                  <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Matahari A
+                  </p>
+                </div>
               </div>
             </div>
             <div className="mt-2">
@@ -179,18 +222,20 @@ const InpatientRoom = () => {
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   Kelas 3
                 </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Matahari B
-                </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Mentari A
-                </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Mentari B
-                </p>
-                <p className="text-lg text-center md:text-start tracking-wide">
-                  Neonatus
-                </p>
+                <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-start md:gap-1">
+                  <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Matahari B
+                  </p>
+                  <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Mentari A
+                  </p>
+                  <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Mentari B
+                  </p>
+                  <p className="text-lg md:text-base text-center md:text-start tracking-wide">
+                    Neonatus
+                  </p>
+                </div>
               </div>
             </div>
             <div className="mt-2">
@@ -263,7 +308,7 @@ const InpatientRoom = () => {
                   className="text-gray-50"
                 />
               </div>
-              <div className="flex-1 ms-2 p-4">
+              <div className="flex-1 ms-2 p-2 md:p-4">
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   NICU
                 </p>
@@ -287,7 +332,7 @@ const InpatientRoom = () => {
                   className="text-gray-50"
                 />
               </div>
-              <div className="flex-1 ms-2 p-4">
+              <div className="flex-1 ms-2 p2 md:p-4">
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   Ruang Isolasi
                 </p>

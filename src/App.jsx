@@ -26,4 +26,5 @@ const App = () => {
   );
 };
 
+export const URL_API = 'http://109.110.1.23:8000/api/';
 export default App;
