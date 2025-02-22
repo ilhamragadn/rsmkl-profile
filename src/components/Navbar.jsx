@@ -102,7 +102,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-30 top-0 start-0 border-b border-sky-300">
+    <nav className="bg-white fixed w-full z-30 top-0 start-0 border-b border-sky-300">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
         {/* Logo */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -137,7 +137,7 @@ const Navbar = () => {
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-sticky"
             aria-expanded={isOpen}
             onClick={toggleMenu}
@@ -168,24 +168,24 @@ const Navbar = () => {
           } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-2 md:p-0 my-2 md:my-0 font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-2 md:p-0 my-2 md:my-0 font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             {menuItems.map((item) => (
               <li key={item.name} className="relative">
                 {item.submenu ? (
                   <>
                     <div
                       onClick={() => toggleDropdownLayanan()}
-                      className="cursor-pointer block py-2 px-3 text-sm md:text-base text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                      className="cursor-pointer block py-2 px-3 text-sm md:text-base text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                     >
                       Layanan <FontAwesomeIcon icon={faChevronDown} size="xs" />
                     </div>
                     {dropdownLayanan && (
-                      <ul className="absolute left-0 z-10 mt-2 w-28 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg">
+                      <ul className="absolute left-0 z-10 mt-2 w-28 bg-gray-50 rounded-lg shadow-lg">
                         {item.submenu.map((submenuItem) => (
                           <li key={submenuItem.name}>
                             <a
                               href={submenuItem.path}
-                              className="block px-3 py-2 text-center text-xs md:text-sm text-gray-900 dark:text-white hover:bg-white dark:hover:bg-gray-700 rounded"
+                              className="block px-3 py-2 text-center text-xs md:text-sm text-gray-900 hover:bg-white rounded"
                             >
                               {submenuItem.name}
                             </a>
@@ -197,7 +197,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.path}
-                    className="block py-2 px-3 text-sm md:text-base text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 px-3 text-sm md:text-base text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                   >
                     {item.name}
                   </a>
