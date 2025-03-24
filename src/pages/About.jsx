@@ -5,7 +5,7 @@ import JaringanRSMJatim from "../assets/img/partnerships/Logo-Jaringan-RSM-Jatim
 import JasaRaharja from "../assets/img/partnerships/logo-jasa-raharja.png";
 import piagamMPKSDI from "../assets/img/sertif/penghargaan-mpksdi.png";
 import sertifikatLARSI from "../assets/img/sertif/sertifikat-akreditasi-LARSI.png";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/main/Carousel";
 
 const About = () => {
   const images = [sertifikatLARSI, piagamMPKSDI];

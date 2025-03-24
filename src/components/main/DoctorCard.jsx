@@ -11,6 +11,7 @@ const DoctorCard = ({
         className="max-w-full h-auto mx-auto"
         src={doctorImg}
         alt="doctor image"
+        loading="lazy"
       />
       <div className="absolute bottom-2 left-0 w-full bg-sky-50 opacity-90 p-1 md:p-2 lg:p-4 text-center">
         <p className="text-sm md:text-xl lg:text-2xl font-bold">{doctorName}</p>

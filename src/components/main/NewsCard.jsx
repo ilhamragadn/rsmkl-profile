@@ -1,6 +1,6 @@
 const NewsCard = ({ imgSrc, title, body, children }) => {
   return (
-    <div className="w-80 max-w-sm max-h-[25rem] overflow-hidden bg-gray-50 rounded-lg shadow-md">
+    <div className="w-80 max-w-sm max-h-[25rem] h-fit overflow-hidden bg-gray-50 rounded-lg shadow-md">
       <div className="flex">
         <div>
           <img

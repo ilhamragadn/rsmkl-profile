@@ -4,7 +4,7 @@ import Doctor from "./pages/Doctor";
 import InpatientRoom from "./pages/InpatientRoom";
 import Polyclinic from "./pages/Polyclinic";
 import Welcome from "./pages/Welcome";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/main/Navbar";
 import DetailInpatientRoom from "./pages/DetailInpatientRoom";
 
 const App = () => {
@@ -26,5 +26,5 @@ const App = () => {
   );
 };
 
-export const URL_API = 'http://109.110.1.23:8000/api/';
+// export const URL_API = "http://109.110.1.23:8000/api/";
 export default App;

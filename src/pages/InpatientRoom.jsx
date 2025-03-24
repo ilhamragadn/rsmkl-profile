@@ -4,31 +4,8 @@ import {
   faPeopleArrows,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { URL_API } from "../App";
 
 const InpatientRoom = () => {
-  const [dataKamarInap, setDataKamarInap] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(`${URL_API}inpatient-room`);
-        if (res.data.success) {
-          setDataKamarInap(res.data.data);
-        } else {
-          console.log("Failed fetching data: ", res.data.message);
-        }
-      } catch (error) {
-        console.log("Error fetching data: ", error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  console.log(dataKamarInap);
-
   return (
     <div>
       <div className="mt-12 md:mt-20 h-auto md:h-screen bg-gray-50">
@@ -52,25 +29,6 @@ const InpatientRoom = () => {
                 <p className="text-2xl text-center md:text-start font-bold tracking-wider">
                   Kelas VIP
                 </p>
-                <div className="flex flex-col md:flex-row md:flex-wrap justify-center md:justify-start md:gap-1">
-                  {Array.isArray(dataKamarInap) && dataKamarInap.length > 0 ? (
-                    dataKamarInap.map((item, index) =>
-                      item.class === "Kelas VIP" ? (
-                        <p
-                          key={index}
-                          className="text-lg md:text-base text-center md:text-start tracking-wide"
-                        >
-                          {item.name}
-                        </p>
-                      ) : null
-                    )
-                  ) : (
-                    <p>No data available</p>
-                  )}
-                  {/* <p className="text-lg md:text-base text-center md:text-start tracking-wide">
-                    Matahari A
-                  </p> */}
-                </div>
               </div>
             </div>
             <div className="mt-2">
@@ -97,7 +55,7 @@ const InpatientRoom = () => {
                 </div>
               </div>
               <a
-                href="/detail-inpatient-room"
+                href=""
                 className="block bg-sky-500 p-2 mt-4 rounded shadow-md text-center text-white font-medium"
               >
                 Detail

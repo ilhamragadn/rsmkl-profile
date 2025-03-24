@@ -1,17 +1,3 @@
-import {
-  faBaby,
-  faBookMedical,
-  faCapsules,
-  faClockRotateLeft,
-  faEnvelope,
-  faFlaskVial,
-  faHouseMedical,
-  faLink,
-  faMapLocationDot,
-  faTruckMedical,
-  faUserDoctor,
-  faXRay,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gmailIcon from "../assets/icons/gmail.png";
 import igIcon from "../assets/icons/instagram.png";
@@ -21,10 +7,17 @@ import accreditation from "../assets/img/akreditasi.png";
 import carouselImgWomans from "../assets/img/rsmkl-fotbar-cewe.png";
 import carouselImgHigherUps from "../assets/img/rsmkl-fotbar-petinggi.png";
 import RSMKLFull from "../assets/logo-rsmkl-full.png";
-import Carousel from "../components/Carousel";
-import NewsCard from "../components/NewsCard";
-import ServiceCard from "../components/ServiceCard";
-import ReadMoreBtn from "../utils/ReadMoreBtn";
+import Carousel from "../components/main/Carousel";
+import NewsCard from "../components/main/NewsCard";
+import ServiceCard from "../components/main/ServiceCard";
+import ReadMoreBtn from "../components/main/ReadMoreBtn";
+import { servicedatas } from "../utils/services";
+import {
+  faEnvelope,
+  faLink,
+  faMapLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { infoDatas } from "../utils/informations";
 
 const Welcome = () => {
   const images = [carouselImgHigherUps, accreditation, carouselImgWomans];
@@ -62,24 +55,23 @@ const Welcome = () => {
         id="about"
         className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 pt-0 md:pt-2"
       >
-        <div className="">
+        <div>
           <Carousel srcImg={images} className="w-full" />
         </div>
         <div className="flex flex-col justify-center items-center px-8">
           <p className="text-4xl font-bold">
             Rumah Sakit Muhammadiyah Kalikapas
           </p>
-          <p className="mt-8 text-justify indent-10">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ad,
-            culpa quas itaque incidunt laborum repudiandae nemo soluta aliquam
-            reprehenderit, dicta ab. Fugiat natus, enim velit quam consectetur
-            maxime reiciendis? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Id animi impedit quasi atque vitae, consequatur
-            iusto eius libero officia soluta laboriosam totam, dolorum sequi est
-            et fugit in quia suscipit?
+          <p className="mt-8 text-justify indent-10 tracking-tight leading-snug">
+            Kami resmi beroperasi sejak 8 April 2021. Terletak di Jalan Raya
+            Mantup, RT.01/RW.02, Kalikapas, Sidomukti, Kecamatan Lamongan,
+            Kabupaten Lamongan, Jawa Timur, 62218. Dengan motto &quot;Kesehatan
+            Anda adalah Kerja dan Ibadah Kami&quot;, kami berkomitmen untuk
+            memberikan pelayanan kesehatan yang unggul dan terjangkau demi
+            kesembuhan pasien.
           </p>
           <div className="mt-4">
-            <ReadMoreBtn goTo="/about" />
+            <ReadMoreBtn goTo="/about" txtBtn="Tentang Kami" />
           </div>
         </div>
       </div>
@@ -89,52 +81,20 @@ const Welcome = () => {
         <div>
           <p className="font-bold text-3xl ms-4">Layanan</p>
           <p className="mt-4 ms-4 indent-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sint
-            a sed enim nisi quidem porro ea cumque iste id quibusdam vel ex,
-            blanditiis in tempore. Sequi nostrum blanditiis consectetur. Lorem
-            ipsum dolor, sit amet consectetur adipisicing elit. Vero saepe
-            suscipit voluptate! Libero, consequuntur. Reprehenderit animi, minus
-            debitis nostrum hic similique aperiam, beatae, nesciunt et ex est
-            dolor quis iusto!
+            Kami berusaha semaksimal mungkin untuk memberikan layanan yang
+            unggul. Berikut ini adalah beberapa layanan yang tersedia di Rumah
+            Sakit Muhammadiyah Kalikapas Lamongan yang bertipe D.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faClockRotateLeft} size="3x" />}
-            title="IGD 24 Jam"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faTruckMedical} size="3x" />}
-            title="Ambulance"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faCapsules} size="3x" />}
-            title="Instalasi Farmasi"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faBookMedical} size="3x" />}
-            title="Rekam Medis"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faBaby} size="3x" />}
-            title="Persalinan"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faFlaskVial} size="3x" />}
-            title="Laboratorium"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faXRay} size="3x" />}
-            title="Radiologi"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faHouseMedical} size="3x" />}
-            title="Rawat Inap"
-          />
-          <ServiceCard
-            icon={<FontAwesomeIcon icon={faUserDoctor} size="3x" />}
-            title="Instalasi Bedah Sentral"
-          />
+          {servicedatas.map((service, index) => (
+            <ServiceCard
+              key={index}
+              icon={<FontAwesomeIcon icon={service.icon} size="3x" />}
+              title={service.title}
+            />
+          ))}
+
           <div className="col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               href="/polyclinic"
@@ -207,20 +167,16 @@ const Welcome = () => {
             <div className="flex flex-nowrap">
               <div className="inline-block p-2">
                 <div className="flex space-x-4">
-                  <NewsCard
-                    imgSrc="https://i0.wp.com/pwmu.co/wp-content/uploads/2021/04/IMG-20210410-WA0020.jpg?resize=1024%2C683&ssl=1"
-                    title="Hasil Akuisisi, RS Muhammadiyah Kalikapas Lamongan Diresmikan"
-                    body="Direktur RSM Kalikapas dr Romy Hari Purjianto SpB menyampaikan rasa syukur atas peresmian ini. “Pada tahun 2018 Pimpinan Daerah Muhammadiyah (PDM) Lamongan melakukan proses akuisisi rumah sakit swasta yang berhenti beroperasi untuk dijadikan amal usaha Muhammadiyah,” ujarnya dalam sambutan."
-                  >
-                    <ReadMoreBtn goTo="https://pwmu.co/186453/04/10/hasil-akuisisi-rs-muhammadiyah-kalikapas-lamongan-diresmikan1/" />
-                  </NewsCard>
-                  <NewsCard
-                    imgSrc="https://www.muhammadiyahlamongan.com/wp-content/uploads/2024/08/IMG-20240819-WA0033-768x475.jpg"
-                    title="RS Kalikapas Serahkan Hadiah Lomba Semarak HUT RI Ke 79"
-                    body="Dalam rangka semarak merayakan Hari Kemerdekaan Republik Indonesia ke 79 Rumah Sakit Muhammadiyah Kalikapas Lamongan mengadakan sejumlah lomba."
-                  >
-                    <ReadMoreBtn goTo="https://www.muhammadiyahlamongan.com/blog/rs-kalikapas-serahkan-hadiah-lomba-semarak-hut-ri-ke-79/" />
-                  </NewsCard>
+                  {infoDatas.map((info, index) => (
+                    <NewsCard
+                      key={index}
+                      imgSrc={info.img}
+                      title={info.title}
+                      body={info.body}
+                    >
+                      <ReadMoreBtn txtBtn="Kunjungi" goTo={info.link} />
+                    </NewsCard>
+                  ))}
                 </div>
               </div>
             </div>
@@ -263,9 +219,9 @@ const Welcome = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="">
+          <div>
             <div className="p-4">
-              <form action="">
+              <form id="formPengaduan" action="" name="formPengaduan">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <input

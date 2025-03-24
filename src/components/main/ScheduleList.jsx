@@ -1,13 +1,13 @@
 const ScheduleList = ({
-  speciality = "",
+  title = "",
   startHour = "",
   endHour = "",
   doctorInCharge = "",
 }) => {
   return (
     <div>
-      <div className="flex justify-between p-2 bg-gradient-to-t from-white via-slate-100 to-white text-sm md:text-xl font-medium">
-        <p className="me-2">{speciality}</p>
+      <div className="flex justify-between p-2 bg-gradient-to-t from-white via-slate-100 to-white text-sm md:text-lg font-medium">
+        <p className="me-2">{title}</p>
         <p>
           {startHour} &minus; {endHour} WIB
         </p>

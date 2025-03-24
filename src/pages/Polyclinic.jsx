@@ -1,47 +1,14 @@
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import ScheduleList from "../utils/ScheduleList";
+import ScheduleList from "../components/main/ScheduleList";
+import { polyclinicDatas } from "../utils/polyclinics";
 
 const Polyclinic = () => {
-  const [showAnak, setShowAnak] = useState(false);
-  const [showBedah, setShowBedah] = useState(false);
-  const [showJantung, setShowJantung] = useState(false);
-  const [showObgyn, setShowObgyn] = useState(false);
-  const [showMata, setShowMata] = useState(false);
-  const [showOrtopedi, setShowOrtopedi] = useState(false);
-  const [showPenyakitDalam, setShowPenyakitDalam] = useState(false);
-  const [showSyaraf, setShowSyaraf] = useState(false);
+  const [showPoly, setShowPoly] = useState({});
 
-  const toggleShow = (speciality) => {
-    switch (speciality) {
-      case "Anak":
-        setShowAnak(!showAnak);
-        break;
-      case "Bedah":
-        setShowBedah(!showBedah);
-        break;
-      case "Jantung":
-        setShowJantung(!showJantung);
-        break;
-      case "Obgyn":
-        setShowObgyn(!showObgyn);
-        break;
-      case "Mata":
-        setShowMata(!showMata);
-        break;
-      case "Ortopedi":
-        setShowOrtopedi(!showOrtopedi);
-        break;
-      case "PenyakitDalam":
-        setShowPenyakitDalam(!showPenyakitDalam);
-        break;
-      case "Syaraf":
-        setShowSyaraf(!showSyaraf);
-        break;
-      default:
-        break;
-    }
+  const dropdownPoly = (title) => {
+    setShowPoly((prev) => ({ ...prev, [title]: !prev[title] }));
   };
 
   return (
@@ -51,223 +18,66 @@ const Polyclinic = () => {
           <p className="text-3xl font-semibold tracking-wide">Poliklinik</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-8 pb-8">
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Anak
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Anak")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showAnak && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Rabu"
-                  startHour="15.00"
-                  endHour="17.00"
-                  doctorInCharge="dr. Bayu Kurniawan, Sp.A."
-                />
-              </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Bedah
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Bedah")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showBedah && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Senin, Selasa, Rabu, Kamis"
-                  startHour="15.00"
-                  endHour="17.00"
-                  doctorInCharge="dr. Romy Hari Pujianto, Sp.B."
-                />
-              </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Jantung
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Jantung")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showJantung && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Rabu"
-                  startHour="16.00"
-                  endHour="17.00"
-                  doctorInCharge="dr. Lakhsmi Pramushinta, Sp.JP."
-                />
-              </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Kandungan & Kebidanan
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Obgyn")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showObgyn && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Senin"
-                  startHour="15.00"
-                  endHour="17.00"
-                  doctorInCharge="dr. Diyah Novita Ofa N, Sp.OG."
-                />
-                <ScheduleList
-                  speciality="Selasa, Rabu, Kamis, Jum'at"
-                  startHour="15.00"
-                  endHour="17.00"
-                  doctorInCharge="dr. Eni Fatmawati, Sp.OG."
-                />
-              </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Mata
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Mata")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showMata && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Senin, Selasa, Jum'at"
-                  startHour="09.00"
-                  endHour="12.00"
-                  doctorInCharge="dr. Razzaqy, Sp.M."
-                />
-              </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Ortopedi
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Ortopedi")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showOrtopedi && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Senin"
-                  startHour="15.00"
-                  endHour="17.00"
-                  doctorInCharge="dr. Abdurrahman Yusuf Habibie, Sp.OT."
-                />
-              </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Penyakit Dalam
-                </p>
-              </div>
-              <button
-                className="p-1"
-                onClick={() => toggleShow("PenyakitDalam")}
+          {polyclinicDatas.map((polyclinic, index) => {
+            // **Mengelompokkan jadwal berdasarkan jam praktek**
+            const groupedSchedules = polyclinic.schedule.reduce(
+              (acc, { day, startHour, endHour, doctorInCharge }) => {
+                const key = `${startHour}-${endHour}`;
+                if (!acc[key]) {
+                  acc[key] = {
+                    startHour,
+                    endHour,
+                    days: [],
+                    doctors: new Set(),
+                  };
+                }
+                acc[key].days.push(day);
+                acc[key].doctors.add(doctorInCharge);
+                return acc;
+              },
+              {}
+            );
+
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-md p-4 shadow-md h-min"
               >
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showPenyakitDalam && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Selasa, Rabu, Jum'at"
-                  startHour="12.05"
-                  endHour="14.05"
-                  doctorInCharge="dr. Fajar Admayana, Sp.PD."
-                />
+                <div className="flex flex-row items-center">
+                  <div className="flex-1 p-1">
+                    <p className="font-medium tracking-wide italic">
+                      Poliklinik Spesialis {polyclinic.title}
+                    </p>
+                  </div>
+                  <button
+                    className="p-1"
+                    onClick={() => dropdownPoly(polyclinic.title)}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCircleChevronDown}
+                      size="xl"
+                      className="text-black/80"
+                    />
+                  </button>
+                </div>
+                {showPoly[polyclinic.title] && (
+                  <div className="mt-4">
+                    {Object.values(groupedSchedules).map((schedule, i) => (
+                      <ScheduleList
+                        key={i}
+                        title={schedule.days.join(", ")} // Gabungkan hari yang sama
+                        startHour={schedule.startHour}
+                        endHour={schedule.endHour}
+                        doctorInCharge={Array.from(schedule.doctors).join(
+                          " | "
+                        )} // Gabungkan nama dokter
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <div className="bg-white rounded-md p-4 shadow-md h-min">
-            <div className="flex flex-row items-center">
-              <div className="flex-1 p-1">
-                <p className="font-medium tracking-wide italic">
-                  Poliklinik Spesialis Syaraf
-                </p>
-              </div>
-              <button className="p-1" onClick={() => toggleShow("Syaraf")}>
-                <FontAwesomeIcon
-                  icon={faCircleChevronDown}
-                  size="xl"
-                  className="text-black/80"
-                />
-              </button>
-            </div>
-            {showSyaraf && (
-              <div className="mt-4">
-                <ScheduleList
-                  speciality="Sabtu"
-                  startHour="12.05"
-                  endHour="14.05"
-                  doctorInCharge="dr. Dhimas Hantoko, Sp.S."
-                />
-              </div>
-            )}
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
