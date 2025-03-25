@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/doctor" element={<Doctor />} />
         <Route path="/inpatient-room" element={<InpatientRoom />} />
         <Route
-          path="/detail-inpatient-room"
+          path="/detail-inpatient-room/:id"
           element={<DetailInpatientRoom />}
         />
         <Route path="/polyclinic" element={<Polyclinic />} />
@@ -26,5 +26,4 @@ const App = () => {
   );
 };
 
-// export const URL_API = "http://109.110.1.23:8000/api/";
 export default App;

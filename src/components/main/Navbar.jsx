@@ -12,6 +12,21 @@ const Navbar = () => {
   const pathName = location.pathname;
 
   const getMenuItems = () => {
+    if (pathName.includes("/detail-inpatient-room/")) {
+      return [
+        { name: "Beranda", path: "/" },
+        { name: "Tentang", path: "/about" },
+        {
+          name: "Layanan",
+          submenu: [
+            { name: "Poliklinik", path: "/polyclinic" },
+            { name: "Kamar Inap", path: "/inpatient-room" },
+          ],
+        },
+        { name: "Dokter", path: "/doctor" },
+      ];
+    }
+
     switch (pathName) {
       case "/":
         return [
@@ -71,21 +86,8 @@ const Navbar = () => {
           },
           { name: "Dokter", path: "/doctor" },
         ];
-      case "/detail-inpatient-room":
-        return [
-          { name: "Beranda", path: "/" },
-          { name: "Tentang", path: "/about" },
-          {
-            name: "Layanan",
-            submenu: [
-              { name: "Poliklinik", path: "/polyclinic" },
-              { name: "Kamar Inap", path: "/inpatient-room" },
-            ],
-          },
-          { name: "Dokter", path: "/doctor" },
-        ];
       default:
-        break;
+        return [];
     }
   };
 
