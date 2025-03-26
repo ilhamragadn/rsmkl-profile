@@ -3,9 +3,10 @@ import gmailIcon from "../assets/icons/gmail.png";
 import igIcon from "../assets/icons/instagram.png";
 import waIcon from "../assets/icons/whatsapp.png";
 import ytIcon from "../assets/icons/youtube.png";
-import accreditation from "../assets/img/1.png";
-import carouselImgWomans from "../assets/img/2.png";
-import carouselImgHigherUps from "../assets/img/3.png";
+import frontRSMKL from "../assets/img/rsmkl-front.jpeg";
+import firstCarousel from "../assets/img/1.png";
+import secondCarousel from "../assets/img/2.png";
+import thirdCarousel from "../assets/img/3.png";
 import RSMKLFull from "../assets/logo-rsmkl-full.png";
 import Carousel from "../components/main/Carousel";
 import NewsCard from "../components/main/NewsCard";
@@ -20,7 +21,8 @@ import {
 import { infoDatas } from "../utils/informations";
 
 const Welcome = () => {
-  const images = [carouselImgHigherUps, accreditation, carouselImgWomans];
+  const images = [frontRSMKL, firstCarousel, secondCarousel, thirdCarousel];
+
   return (
     <div>
       {/* decoration */}
@@ -53,7 +55,7 @@ const Welcome = () => {
       {/* about */}
       <div
         id="about"
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-8 pt-0 md:pt-2"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 m-4 pt-0 md:pt-2"
       >
         <div>
           <Carousel srcImg={images} className="w-full" />
@@ -281,7 +283,11 @@ const Welcome = () => {
                 </a>
               </div>
               <div className="flex flex-row items-center">
-                <a href="https://linktr.ee/rsmkalikapas" target="blank">
+                <a
+                  href="https://linktr.ee/rsmkalikapas"
+                  target="_blank"
+                  className="text-gray-400 hover:underline hover:underline-offset-2"
+                >
                   <FontAwesomeIcon icon={faLink} size="xs" />
                   <span className="ms-1">linktr.ee/rsmkalikapas</span>
                 </a>

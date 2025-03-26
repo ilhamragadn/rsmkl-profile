@@ -32,11 +32,11 @@ const Carousel = ({ srcImg, ...props }) => {
 
   return (
     <div className="relative w-full">
-      <div className="relative h-48 md:h-[26rem] lg:h-auto overflow-hidden  rounded-lg shadow-lg">
+      <div className="relative object-contain max-h-[80vh] md:max-h-[26rem] lg:h-auto overflow-hidden rounded-lg shadow-lg">
         <div>
           <img
             src={srcImg[currentIndex]}
-            className={`absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2`}
+            className={`absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2`}
             {...props}
             alt={`carousel-img-${currentIndex}`}
           />

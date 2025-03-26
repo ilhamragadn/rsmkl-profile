@@ -12,13 +12,13 @@ const About = () => {
   return (
     <div>
       <div className="max-w-screen-xl mt-12 mb-8 md:mt-24 p-4 mx-auto shadow-md rounded-md">
-        <p className="text-2xl text-center font-semibold">
+        <p className="text-4xl text-center font-semibold font-serif">
           RS Muhammadiyah Kalikapas Lamongan
         </p>
 
-        <div className="mt-8 px-4">
+        <div className="mt-4 px-4">
           <p className="text-xl font-bold">Visi</p>
-          <p className="mt-4 text-justify">
+          <p className="mt-2 text-justify">
             &quot;Menjadi Rumah Sakit yang unggul, mandiri, dan berdaya saing
             tinggi, berbasis Penolong Kesengsaraan Umum sebagai perwujudan Islam
             Rahamatan Lil Alamin.&quot;
@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <div className="mt-8 px-4">
           <p className="text-xl font-bold">Misi</p>
-          <ol className="space-y-2 mt-4 text-justify">
+          <ol className="space-y-2 mt-2 text-justify leading-4">
             <li>
               1. Memberikan pelayanan kesehatan yang Islami, profesional,
               bermutu, dan berkemajuan dalam rangka dakwah Amar Ma&apos;ruf Nahi
@@ -49,18 +49,18 @@ const About = () => {
         </div>
         <div className="mt-8 px-4">
           <p className="text-xl font-bold">Motto</p>
-          <p className="mt-4 text-justify italic">
+          <p className="mt-2 text-justify italic">
             &quot;Kesembuhan Anda adalah Kerja Ibadah Kami.&quot;
           </p>
         </div>
         <div className="mt-8 px-4">
-          <p className="text-xl font-bold text-center mb-4">Mitra</p>
+          <p className="text-xl font-bold text-center mb-2">Mitra</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
-            <div className="col-span-4 rounded shadow">
+            <div className="col-span-1 md:col-span-4">
               <img
                 src={JaringanRSMJatim}
                 alt="logo-jejaring-rsm"
-                className="mx-auto"
+                className="mx-auto rounded shadow"
                 style={{ height: "150px" }}
               />
             </div>
@@ -102,8 +102,8 @@ const About = () => {
           <p className="text-xl font-bold text-center">
             Akreditasi & Penghargaan
           </p>
-          <div className="max-w-4xl flex justify-center mt-4 mx-auto">
-            <Carousel srcImg={images} className="max-w-2xl mx-auto" />
+          <div className="max-w-xl flex justify-center mt-2 mx-auto">
+            <Carousel srcImg={images} className="md:max-w-xl mx-auto" />
           </div>
         </div>
       </div>
