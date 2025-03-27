@@ -3,6 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import ScheduleList from "../components/main/ScheduleList";
 import { polyclinicDatas } from "../utils/polyclinics";
+import Carousel from "../components/main/Carousel";
+import operation from "../assets/img/services/operasi.jpg";
+import childPoly from "../assets/img/services/poli-anak.jpeg";
+import radiology from "../assets/img/services/rsmkl-radiologi.jpeg";
+import lab from "../assets/img/services/rsmkl-lab.jpg";
+import usg4D from "../assets/img/services/USG-4D.jpg";
 
 const Polyclinic = () => {
   const [showPoly, setShowPoly] = useState({});
@@ -11,11 +17,18 @@ const Polyclinic = () => {
     setShowPoly((prev) => ({ ...prev, [title]: !prev[title] }));
   };
 
+  const serviceImg = [radiology, operation, childPoly, lab, usg4D];
+
   return (
     <div>
       <div className="mt-12 md:mt-20 h-auto md:h-screen bg-gray-50">
-        <div className="px-12 py-8">
-          <p className="text-3xl font-semibold tracking-wide">Poliklinik</p>
+        <div className="max-w-xl flex justify-center pt-12 mx-auto">
+          <Carousel srcImg={serviceImg} className="md:max-w-xl mx-auto" />
+        </div>
+        <div className="px-12 pt-8 pb-2">
+          <p className="text-4xl text-center font-semibold font-serif tracking-wide">
+            Poliklinik
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-8 pb-8">
           {polyclinicDatas.map((polyclinic, index) => {

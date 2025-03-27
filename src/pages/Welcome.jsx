@@ -3,7 +3,8 @@ import gmailIcon from "../assets/icons/gmail.png";
 import igIcon from "../assets/icons/instagram.png";
 import waIcon from "../assets/icons/whatsapp.png";
 import ytIcon from "../assets/icons/youtube.png";
-import frontRSMKL from "../assets/img/rsmkl-front.jpeg";
+import frontRSMKL1 from "../assets/img/rsmkl-front-1.jpeg";
+import frontRSMKL2 from "../assets/img/rsmkl-front-2.png";
 import firstCarousel from "../assets/img/1.png";
 import secondCarousel from "../assets/img/2.png";
 import thirdCarousel from "../assets/img/3.png";
@@ -21,7 +22,13 @@ import {
 import { infoDatas } from "../utils/informations";
 
 const Welcome = () => {
-  const images = [frontRSMKL, firstCarousel, secondCarousel, thirdCarousel];
+  const images = [
+    frontRSMKL1,
+    frontRSMKL2,
+    firstCarousel,
+    secondCarousel,
+    thirdCarousel,
+  ];
 
   return (
     <div>

@@ -6,12 +6,58 @@ import JasaRaharja from "../assets/img/partnerships/logo-jasa-raharja.png";
 import piagamMPKSDI from "../assets/img/sertif/penghargaan-mpksdi.png";
 import sertifikatLARSI from "../assets/img/sertif/sertifikat-akreditasi-LARSI.png";
 import Carousel from "../components/main/Carousel";
+import gallery1 from "../assets/img/about-rsmkl/gallery1.jpg";
+import gallery2 from "../assets/img/about-rsmkl/gallery2.jpg";
+import gallery3 from "../assets/img/about-rsmkl/gallery3.jpg";
+import gallery4 from "../assets/img/about-rsmkl/gallery4.jpg";
+import gallery5 from "../assets/img/about-rsmkl/gallery5.jpg";
+import gallery6 from "../assets/img/about-rsmkl/gallery6.jpg";
+import gallery7 from "../assets/img/about-rsmkl/gallery7.jpg";
+import gallery8 from "../assets/img/about-rsmkl/gallery8.jpg";
+import gallery9 from "../assets/img/about-rsmkl/gallery9.jpg";
+import gallery10 from "../assets/img/about-rsmkl/gallery10.jpg";
+import gallery11 from "../assets/img/about-rsmkl/gallery11.jpg";
+import gallery12 from "../assets/img/about-rsmkl/gallery12.jpg";
+import gallery13 from "../assets/img/about-rsmkl/gallery13.jpg";
+import gallery14 from "../assets/img/about-rsmkl/gallery14.jpg";
+import gallery15 from "../assets/img/about-rsmkl/gallery15.jpg";
+import gallery16 from "../assets/img/about-rsmkl/gallery16.jpg";
+import gallery17 from "../assets/img/about-rsmkl/gallery17.jpg";
+import gallery18 from "../assets/img/about-rsmkl/gallery18.jpg";
+import gallery19 from "../assets/img/about-rsmkl/gallery19.jpg";
+import gallery20 from "../assets/img/about-rsmkl/gallery20.jpg";
 
 const About = () => {
-  const images = [sertifikatLARSI, piagamMPKSDI];
+  const certificatImg = [sertifikatLARSI, piagamMPKSDI];
+  const aboutImg = [
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+    gallery10,
+    gallery11,
+    gallery12,
+    gallery13,
+    gallery14,
+    gallery15,
+    gallery16,
+    gallery17,
+    gallery18,
+    gallery19,
+    gallery20,
+  ];
+
   return (
     <div>
-      <div className="max-w-screen-xl mt-12 mb-8 md:mt-24 p-4 mx-auto shadow-md rounded-md">
+      <div className="max-w-xl flex justify-center pt-32 mx-auto">
+        <Carousel srcImg={aboutImg} className="md:max-w-xl mx-auto" />
+      </div>
+      <div className="max-w-screen-xl mt-12 mb-8 md:mt-2 p-4 mx-auto shadow-md rounded-md">
         <p className="text-4xl text-center font-semibold font-serif">
           RS Muhammadiyah Kalikapas Lamongan
         </p>
@@ -53,6 +99,7 @@ const About = () => {
             &quot;Kesembuhan Anda adalah Kerja Ibadah Kami.&quot;
           </p>
         </div>
+
         <div className="mt-8 px-4">
           <p className="text-xl font-bold text-center mb-2">Mitra</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
@@ -98,12 +145,13 @@ const About = () => {
             </div>
           </div>
         </div>
+
         <div className="mt-8 mb-2 px-4">
           <p className="text-xl font-bold text-center">
             Akreditasi & Penghargaan
           </p>
-          <div className="max-w-xl flex justify-center mt-2 mx-auto">
-            <Carousel srcImg={images} className="md:max-w-xl mx-auto" />
+          <div className="max-w-xl flex justify-center mt-4 mx-auto">
+            <Carousel srcImg={certificatImg} className="md:max-w-xl mx-auto" />
           </div>
         </div>
       </div>

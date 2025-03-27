@@ -40,6 +40,87 @@ export const polyclinicDatas = [
     ],
   },
   {
+    title: "Gigi",
+    schedule: [
+      {
+        day: "Senin",
+        startHour: "13.00",
+        endHour: "15.00",
+        doctorInCharge: "drg. Agus Syaifuddin Setiawan.",
+      },
+      {
+        day: "Selasa",
+        startHour: "13.00",
+        endHour: "15.00",
+        doctorInCharge: "drg. Agus Syaifuddin Setiawan.",
+      },
+      {
+        day: "Rabu",
+        startHour: "13.00",
+        endHour: "15.00",
+        doctorInCharge: "drg. Agus Syaifuddin Setiawan.",
+      },
+      {
+        day: "Kamis",
+        startHour: "13.00",
+        endHour: "15.00",
+        doctorInCharge: "drg. Agus Syaifuddin Setiawan.",
+      },
+    ],
+  },
+  {
+    title: "Gigi Periodonsia",
+    schedule: [
+      {
+        day: "Selasa",
+        startHour: "09.00",
+        endHour: "11.00",
+        doctorInCharge: "drg. Lina Rohmawati, Sp.Perio.",
+      },
+      {
+        day: "Rabu",
+        startHour: "09.00",
+        endHour: "11.00",
+        doctorInCharge: "drg. Lina Rohmawati, Sp.Perio.",
+      },
+      {
+        day: "Kamis",
+        startHour: "09.00",
+        endHour: "11.00",
+        doctorInCharge: "drg. Lina Rohmawati, Sp.Perio.",
+      },
+    ],
+  },
+  {
+    title: "Gizi",
+    schedule: [
+      {
+        day: "Selasa",
+        startHour: "15.00",
+        endHour: "17.00",
+        doctorInCharge: "dr. Dewi Masitha, Sp.GK.",
+      },
+      {
+        day: "Rabu",
+        startHour: "15.00",
+        endHour: "17.00",
+        doctorInCharge: "dr. Dewi Masitha, Sp.GK.",
+      },
+      {
+        day: "Kamis",
+        startHour: "15.00",
+        endHour: "17.00",
+        doctorInCharge: "dr. Dewi Masitha, Sp.GK.",
+      },
+      {
+        day: "Jum'at",
+        startHour: "15.00",
+        endHour: "17.00",
+        doctorInCharge: "dr. Dewi Masitha, Sp.GK.",
+      },
+    ],
+  },
+  {
     title: "Jantung",
     schedule: [
       {

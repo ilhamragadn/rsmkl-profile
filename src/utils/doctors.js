@@ -1,6 +1,3 @@
-// import { "dr.Romy_Hari_Pujianto_Sp.B.png", } from "../../public/img/doctors";
-// import {} from "../../public/img/doctors";
-
 export const doctorDatas = [
   {
     doctorName: "dr. Romy Hari Pujianto, Sp.B.",
@@ -62,5 +59,40 @@ export const doctorDatas = [
     doctorImg: "/img/doctors/dr.Diyah_Nofita_Ofa_N._Sp.OG.png",
     doctorSpecialist: "Dokter Spesialis Obstetri dan Ginekologi (Obgyn)",
   },
-  //   { doctorName: "", doctorImg: "", doctorSpecialist: "" },
+  {
+    doctorName: "dr. Ainun Zakiyah, Sp.An.",
+    doctorImg: "/img/doctors/dr.Ainun_Zakiyah_Sp.An.png",
+    doctorSpecialist: "Dokter Spesialis Anestesi",
+  },
+  {
+    doctorName: "dr. Lena Wahyu Setianingsih",
+    doctorImg: "/img/doctors/dr.Lena_Wahyu_Setianingsih.png",
+    doctorSpecialist: "Dokter Umum",
+  },
+  {
+    doctorName: "dr. Meianti Harjani, Sp.PA.",
+    doctorImg: "/img/doctors/dr.Meianti_Harjani_Sp.PA.png",
+    doctorSpecialist: "Dokter Spesialis Patologi Anatomi",
+  },
+
+  {
+    doctorName: "dr. Qurrotun Ayun Mawadatur",
+    doctorImg: "/img/doctors/dr.Qurrotun_Ayun_Mawadatur.png",
+    doctorSpecialist: "Dokter Umum",
+  },
+  {
+    doctorName: "dr. Mirabella Donna Agriyanti",
+    doctorImg: "/img/doctors/dr.Mirabella_Donna_Agriyanti.png",
+    doctorSpecialist: "Dokter Umum",
+  },
+  {
+    doctorName: "dr. Imama Khalis Nur Arifah",
+    doctorImg: "/img/doctors/dr.Imama_Khalis_Nur_A.png",
+    doctorSpecialist: "Dokter Umum",
+  },
+  {
+    doctorName: "dr. Anisa Wahyuniarti",
+    doctorImg: "/img/doctors/dr.Anisa_Wahyuniarti.png",
+    doctorSpecialist: "Dokter Umum",
+  },
 ];
