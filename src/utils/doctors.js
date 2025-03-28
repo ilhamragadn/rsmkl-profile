@@ -81,8 +81,8 @@ export const doctorDatas = [
     doctorSpecialist: "Dokter Umum",
   },
   {
-    doctorName: "dr. Mirabella Donna Agriyanti",
-    doctorImg: "/img/doctors/dr.Mirabella_Donna_Agriyanti.png",
+    doctorName: "dr. Mira Belladonna Agriyanti",
+    doctorImg: "/img/doctors/dr.Mira_Belladonna_Agriyanti.png",
     doctorSpecialist: "Dokter Umum",
   },
   {

@@ -1,6 +1,6 @@
 export const polyclinicDatas = [
   {
-    title: "Anak",
+    title: "Spesialis Anak",
     schedule: [
       {
         day: "Kamis",
@@ -11,7 +11,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Bedah",
+    title: "Spesialis Bedah",
     schedule: [
       {
         day: "Senin",
@@ -40,7 +40,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Gigi",
+    title: "Spesialis Gigi",
     schedule: [
       {
         day: "Senin",
@@ -69,7 +69,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Gigi Periodonsia",
+    title: "Spesialis Gigi Periodonsia",
     schedule: [
       {
         day: "Selasa",
@@ -92,7 +92,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Gizi",
+    title: "Spesialis Gizi",
     schedule: [
       {
         day: "Selasa",
@@ -121,7 +121,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Jantung",
+    title: "Spesialis Jantung",
     schedule: [
       {
         day: "Kamis",
@@ -132,7 +132,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Kandungan & Kebidanan",
+    title: "Spesialis Kandungan & Kebidanan",
     schedule: [
       {
         day: "Senin",
@@ -167,7 +167,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Mata",
+    title: "Spesialis Mata",
     schedule: [
       {
         day: "Senin",
@@ -190,7 +190,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Ortopedi",
+    title: "Spesialis Ortopedi",
     schedule: [
       {
         day: "Senin",
@@ -201,7 +201,7 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Penyakit Dalam",
+    title: "Spesialis Penyakit Dalam",
     schedule: [
       {
         day: "Selasa",
@@ -224,13 +224,24 @@ export const polyclinicDatas = [
     ],
   },
   {
-    title: "Syaraf",
+    title: "Spesialis Syaraf",
     schedule: [
       {
         day: "Sabtu",
         startHour: "12.05",
         endHour: "14.05",
         doctorInCharge: "dr. Dhimas Hantoko, Sp.S.",
+      },
+    ],
+  },
+  {
+    title: "Umum",
+    schedule: [
+      {
+        day: "Setiap Hari",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum",
       },
     ],
   },

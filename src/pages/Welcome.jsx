@@ -71,7 +71,7 @@ const Welcome = () => {
           <p className="text-4xl font-bold">
             Rumah Sakit Muhammadiyah Kalikapas
           </p>
-          <p className="mt-8 text-justify indent-10 tracking-tight leading-snug">
+          <p className="mt-8 text-justify indent-8 tracking-tight">
             Kami resmi beroperasi sejak 8 April 2021. Terletak di Jalan Raya
             Mantup, RT.01/RW.02, Kalikapas, Sidomukti, Kecamatan Lamongan,
             Kabupaten Lamongan, Jawa Timur, 62218. Dengan motto &quot;Kesehatan

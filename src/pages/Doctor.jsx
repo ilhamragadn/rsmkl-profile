@@ -46,7 +46,11 @@ const Doctor = () => {
                         doctorImg={doctor.doctorImg}
                         doctorName={doctor.doctorName}
                         doctorSpecialist={doctor.doctorSpecialist}
-                        className="bg-gray-100"
+                        className={`bg-neutral-100 ${
+                          doctor.doctorName === "dr. Anisa Wahyuniarti"
+                            ? "pt-10 pb-4"
+                            : "pt-0 pb-0"
+                        }`}
                       />
                     ))}
                   </div>

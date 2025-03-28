@@ -22,15 +22,16 @@ const Polyclinic = () => {
   return (
     <div>
       <div className="mt-12 md:mt-20 h-auto md:h-screen bg-gray-50">
-        <div className="max-w-xl flex justify-center pt-12 mx-auto">
+        <div className="max-w-xl flex justify-center px-2 pt-4 md:pt-8 md:px-0 mx-auto">
           <Carousel srcImg={serviceImg} className="md:max-w-xl mx-auto" />
         </div>
-        <div className="px-12 pt-8 pb-2">
+
+        <div className="px-12 pt-8 pb-4">
           <p className="text-4xl text-center font-semibold font-serif tracking-wide">
             Poliklinik
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mx-8 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-4 mx-8 pb-8">
           {polyclinicDatas.map((polyclinic, index) => {
             // **Mengelompokkan jadwal berdasarkan jam praktek**
             const groupedSchedules = polyclinic.schedule.reduce(
@@ -59,7 +60,7 @@ const Polyclinic = () => {
                 <div className="flex flex-row items-center">
                   <div className="flex-1 p-1">
                     <p className="font-medium tracking-wide italic">
-                      Poliklinik Spesialis {polyclinic.title}
+                      Poliklinik {polyclinic.title}
                     </p>
                   </div>
                   <button

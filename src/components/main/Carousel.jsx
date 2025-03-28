@@ -13,7 +13,7 @@ const Carousel = ({ srcImg, ...props }) => {
       setCurrentIndex((prevIndex) =>
         prevIndex === srcImg.length - 1 ? 0 : prevIndex + 1
       );
-    }, 7000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [srcImg.length]);

@@ -26,6 +26,7 @@ import gallery17 from "../assets/img/about-rsmkl/gallery17.jpg";
 import gallery18 from "../assets/img/about-rsmkl/gallery18.jpg";
 import gallery19 from "../assets/img/about-rsmkl/gallery19.jpg";
 import gallery20 from "../assets/img/about-rsmkl/gallery20.jpg";
+import gallery21 from "../assets/img/about-rsmkl/gallery21.jpg";
 
 const About = () => {
   const certificatImg = [sertifikatLARSI, piagamMPKSDI];
@@ -50,19 +51,21 @@ const About = () => {
     gallery18,
     gallery19,
     gallery20,
+    gallery21,
   ];
 
   return (
     <div>
-      <div className="max-w-xl flex justify-center pt-32 mx-auto">
+      <div className="max-w-xl flex justify-center px-2 pt-16 md:px-0 md:pt-32 mx-auto">
         <Carousel srcImg={aboutImg} className="md:max-w-xl mx-auto" />
       </div>
-      <div className="max-w-screen-xl mt-12 mb-8 md:mt-2 p-4 mx-auto shadow-md rounded-md">
+
+      <div className="max-w-screen-xl mt-2 mb-8 p-4 mx-auto shadow-md rounded-md">
         <p className="text-4xl text-center font-semibold font-serif">
           RS Muhammadiyah Kalikapas Lamongan
         </p>
 
-        <div className="mt-4 px-4">
+        <div className="mt-6 md:mt-4 px-4">
           <p className="text-xl font-bold">Visi</p>
           <p className="mt-2 text-justify">
             &quot;Menjadi Rumah Sakit yang unggul, mandiri, dan berdaya saing
@@ -72,7 +75,7 @@ const About = () => {
         </div>
         <div className="mt-8 px-4">
           <p className="text-xl font-bold">Misi</p>
-          <ol className="space-y-2 mt-2 text-justify leading-4">
+          <ol className="space-y-2 mt-2 text-justify">
             <li>
               1. Memberikan pelayanan kesehatan yang Islami, profesional,
               bermutu, dan berkemajuan dalam rangka dakwah Amar Ma&apos;ruf Nahi
@@ -95,7 +98,7 @@ const About = () => {
         </div>
         <div className="mt-8 px-4">
           <p className="text-xl font-bold">Motto</p>
-          <p className="mt-2 text-justify italic">
+          <p className="mt-2 text-justify font-medium font-serif italic">
             &quot;Kesembuhan Anda adalah Kerja Ibadah Kami.&quot;
           </p>
         </div>
