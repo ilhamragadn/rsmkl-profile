@@ -1,1 +1,1 @@
-rsmkl-profile repository is a web project that we created and developed using React JS and can be visited through the official link of RS Muhammadiyah Kalikapas at www.rsmkalikapas.co.id or alternatively through vercel at www.rsmkalikapas.vercel.app
+rsmkl-profile repository is a web project that we created and developed using React JS and can be visited through the official link of RS Muhammadiyah Kalikapas at www.rsmkalikapas.co.id or alternatively through vercel at https://rsmkalikapas.vercel.app/
