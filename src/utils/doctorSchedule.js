@@ -3,6 +3,12 @@ export const doctorScheduleDatas = [
     day: "Senin",
     schedules: [
       {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+      {
         speciality: "Mata",
         startHour: "09.00",
         endHour: "12.00",
@@ -37,6 +43,12 @@ export const doctorScheduleDatas = [
   {
     day: "Selasa",
     schedules: [
+      {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
       {
         speciality: "Gigi Periodonsia",
         startHour: "09.00",
@@ -85,6 +97,12 @@ export const doctorScheduleDatas = [
     day: "Rabu",
     schedules: [
       {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+      {
         speciality: "Gigi Periodonsia",
         startHour: "09.00",
         endHour: "11.00",
@@ -132,6 +150,12 @@ export const doctorScheduleDatas = [
     day: "Kamis",
     schedules: [
       {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+      {
         speciality: "Gigi Periodonsia",
         startHour: "09.00",
         endHour: "11.00",
@@ -173,6 +197,12 @@ export const doctorScheduleDatas = [
     day: "Jum'at",
     schedules: [
       {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+      {
         speciality: "Mata",
         startHour: "09.00",
         endHour: "12.00",
@@ -202,6 +232,12 @@ export const doctorScheduleDatas = [
     day: "Sabtu",
     schedules: [
       {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+      {
         speciality: "Syaraf",
         startHour: "12.05",
         endHour: "14.05",
@@ -209,15 +245,26 @@ export const doctorScheduleDatas = [
       },
     ],
   },
-  //   {
-  //     day: "",
-  //     schedules: [
-  //       {
-  //         speciality: "",
-  //         startHour: "",
-  //         endHour: "",
-  //         doctorInCharge: "",
-  //       },
-  //     ],
-  //   },
+  {
+    day: "Minggu",
+    schedules: [
+      {
+        speciality: "Umum",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+    ],
+  },
+  // {
+  //   day: "",
+  //   schedules: [
+  //     {
+  //       speciality: "",
+  //       startHour: "",
+  //       endHour: "",
+  //       doctorInCharge: "",
+  //     },
+  //   ],
+  // },
 ];

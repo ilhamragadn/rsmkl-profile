@@ -74,7 +74,6 @@ export const doctorDatas = [
     doctorImg: "/img/doctors/dr.Meianti_Harjani_Sp.PA.png",
     doctorSpecialist: "Dokter Spesialis Patologi Anatomi",
   },
-
   {
     doctorName: "dr. Qurrotun Ayun Mawadatur",
     doctorImg: "/img/doctors/dr.Qurrotun_Ayun_Mawadatur.png",

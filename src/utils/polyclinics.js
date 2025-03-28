@@ -1,5 +1,16 @@
 export const polyclinicDatas = [
   {
+    title: "Umum",
+    schedule: [
+      {
+        day: "Setiap Hari",
+        startHour: "07.00",
+        endHour: "21.00",
+        doctorInCharge: "Dokter Umum.",
+      },
+    ],
+  },
+  {
     title: "Spesialis Anak",
     schedule: [
       {
@@ -231,17 +242,6 @@ export const polyclinicDatas = [
         startHour: "12.05",
         endHour: "14.05",
         doctorInCharge: "dr. Dhimas Hantoko, Sp.S.",
-      },
-    ],
-  },
-  {
-    title: "Umum",
-    schedule: [
-      {
-        day: "Setiap Hari",
-        startHour: "07.00",
-        endHour: "21.00",
-        doctorInCharge: "Dokter Umum",
       },
     ],
   },

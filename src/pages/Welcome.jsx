@@ -24,8 +24,8 @@ import { infoDatas } from "../utils/informations";
 const Welcome = () => {
   const images = [
     frontRSMKL1,
-    frontRSMKL2,
     firstCarousel,
+    frontRSMKL2,
     secondCarousel,
     thirdCarousel,
   ];
@@ -293,7 +293,7 @@ const Welcome = () => {
                 <a
                   href="https://linktr.ee/rsmkalikapas"
                   target="_blank"
-                  className="text-gray-400 hover:underline hover:underline-offset-2"
+                  className="text-sky-600 hover:underline hover:underline-offset-2"
                 >
                   <FontAwesomeIcon icon={faLink} size="xs" />
                   <span className="ms-1">linktr.ee/rsmkalikapas</span>
