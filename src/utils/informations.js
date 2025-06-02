@@ -29,12 +29,12 @@ export const infoDatas = [
     link: "https://www.youtube.com/watch?v=oirIgsIAPQs",
     img: "https://i.ytimg.com/vi/oirIgsIAPQs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCDUCe7r5LZk00FnmPQMzdB9prRMA",
   },
-  {
-    title:
-      "Hospital Expo Sebagai Ajang Inovasi Layanan Kesehatan Muhammadiyah Lamongan",
-    body: "Partisipasi RS Muhammadiyah Kalikapas Lamongan dalam Hospital Expo di Lamongan Medical Week patut diapresiasi. Selama tiga hari berturut-turut (23–25 Mei 2024) masyarakat Lamongan disuguhi promosi produk unggulan dan layanan kesehatan dari berbagai Rumah Sakit di Lamongan.",
-    link: "https://www.suaramuhammadiyah.id/read/hospital-expo-sebagai-ajang-inovasi-layanan-kesehatan-muhammadiyah-lamongan",
-    img: "https://www.suaramuhammadiyah.id/storage/posts/image/RS_Muhammadiyah_Lamongan-20240524214157.jpeg",
-  },
+  // {
+  //   title:
+  //     "Hospital Expo Sebagai Ajang Inovasi Layanan Kesehatan Muhammadiyah Lamongan",
+  //   body: "Partisipasi RS Muhammadiyah Kalikapas Lamongan dalam Hospital Expo di Lamongan Medical Week patut diapresiasi. Selama tiga hari berturut-turut (23–25 Mei 2024) masyarakat Lamongan disuguhi promosi produk unggulan dan layanan kesehatan dari berbagai Rumah Sakit di Lamongan.",
+  //   link: "https://www.suaramuhammadiyah.id/read/hospital-expo-sebagai-ajang-inovasi-layanan-kesehatan-muhammadiyah-lamongan",
+  //   img: "https://www.suaramuhammadiyah.id/storage/posts/image/RS_Muhammadiyah_Lamongan-20240524214157.jpeg",
+  // },
   //   { title: "", body: "", link: "", img: "" },
 ];

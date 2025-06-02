@@ -6,10 +6,12 @@ import Polyclinic from "./pages/Polyclinic";
 import Welcome from "./pages/Welcome";
 import Navbar from "./components/main/Navbar";
 import DetailInpatientRoom from "./pages/DetailInpatientRoom";
+import RedirectPath from "./utils/redirectPath";
 
 const App = () => {
   return (
     <Router>
+      <RedirectPath />
       <Navbar />
       <Routes>
         <Route path="/" element={<Welcome />} />
